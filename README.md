@@ -90,8 +90,6 @@ Relationships are implemented using **Primary Keys** and **Foreign Keys**.
 
 ---
 
-## 🗄 Database Tables
-
 ### Users
 
 Stores user information.
@@ -165,69 +163,6 @@ Stores verification results.
 ---
 
 # ⚙ Database Setup
-
-## Step 1
-
-Create a database
-
-```sql
-CREATE DATABASE fakenewsdb;
-```
-
----
-
-## Step 2
-
-Import all SQL tables into MySQL.
-
-Required tables:
-
-- Users
-- News
-- Reports
-- Fact_Checks
-- Sources
-
----
-
-## Step 3
-
-Update database credentials inside `DBConnection`.
-
-```java
-DriverManager.getConnection(
-    "jdbc:mysql://localhost:3306/fakenewsdb",
-    "root",
-    "YOUR_PASSWORD"
-);
-```
-
----
-
-## Step 4
-
-Add MySQL JDBC Driver to your project.
-
-Example:
-
-```
-mysql-connector-j-8.x.x.jar
-```
-
----
-
-## Step 5
-
-Run
-
-```
-DB_Project.java
-```
-
----
-
-
-# 🚀 Getting Started
 
 Follow these steps to run the project on your local machine.
 
@@ -332,6 +267,7 @@ You can now:
 - View Reports
 - View Fake News
 
+---
   
 # 📖 How It Works
 
