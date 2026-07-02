@@ -100,7 +100,7 @@ Stores user information.
 | name     | User Name           |
 | email    | User Email          |
 | role     | user / fact_checker |
-| password | user password       |
+| password | User Password       |
 
 ### Sources
 
