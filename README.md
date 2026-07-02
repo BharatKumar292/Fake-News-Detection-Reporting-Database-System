@@ -1,49 +1,92 @@
-# 📰 Fake News Detection & Reporting Database System
+# 📰 Fake News Detection & Reporting System
 
-## 📌 Project Overview
+A GUI-based **Fake News Detection & Reporting System** developed using **Java Swing** and **MySQL** as part of a **Database Management Systems (DBMS)** course project.
 
-The **Fake News Detection & Reporting Database System** is a DBMS academic project developed using **Java, JDBC, and MySQL**. The system provides a structured platform where users can report suspicious news articles and fact-checkers can verify whether the news is real or fake.
-
-The project demonstrates the practical implementation of database concepts, SQL queries, JDBC connectivity, and Object-Oriented Programming (OOP) principles.
+The system allows users to register, log in, report suspicious news articles, and enables fact checkers to review reported news. All information is stored and managed using a relational database with proper entity relationships.
 
 ---
 
-## 🎯 Objectives
+## 📌 Features
 
-* Allow users to report suspicious news articles.
-* Store and manage news information in a relational database.
-* Enable fact-checkers to verify reported news.
-* Maintain records of reports and fact-checking results.
-* Demonstrate the use of JDBC with MySQL.
-* Apply OOP concepts such as Abstraction, Encapsulation, Inheritance, and Polymorphism.
+### 👤 User Authentication
+- User Registration (Sign Up)
+- Secure Login
+- Role-based access (User / Fact Checker / Admin)
+
+### 📰 News Management
+- Add News
+- Store news with source information
+- Maintain news records in MySQL database
+
+### 🚩 News Reporting
+- Users can report suspicious news
+- Reports are stored with reasons
+- Multiple users can report the same news
+
+### ✅ Fact Checking
+- Only reported news can be fact-checked
+- System analyzes report count
+- Automatically classifies news as:
+  - **Real**
+  - **Fake**
+- Stores fact-check remarks and status
+
+### 📊 Reports
+- View all reported news
+- View fake news records
+- SQL JOIN operations for complete report information
+
+### 💻 Modern GUI
+- Professional Java Swing Interface
+- Login Screen
+- Registration Screen
+- Dashboard
+- User-friendly Forms
+- Responsive Layout
 
 ---
 
-## 🛠 Technologies Used
+# 🛠 Technologies Used
 
-* Java
-* JDBC
-* MySQL
-* SQL
-* Object-Oriented Programming (OOP)
+- Java
+- Java Swing
+- JDBC
+- MySQL
+- SQL
+- Object-Oriented Programming (OOP)
 
 ---
 
-## 👥 System Users
+# 📂 Project Structure
 
-### User
+```
+DB_Project.java
+│
+├── DBConnection
+├── LoginFrame
+├── RegisterFrame
+├── Dashboard
+├── Add User
+├── Add News
+├── Report News
+├── Fact Check
+├── View Reports
+└── View Fake News
+```
 
-* Reports suspicious news.
-* Views system information.
+---
 
-### Fact Checker
+# 🗄 Database Tables
 
-* Reviews reported news.
-* Verifies whether news is Real or Fake.
+The project uses the following relational tables:
 
-### Admin (Future Enhancement)
+- Users
+- News
+- Reports
+- Fact_Checks
+- Sources
 
-* Manage users and system activities.
+Relationships are implemented using **Primary Keys** and **Foreign Keys**.
 
 ---
 
@@ -53,12 +96,13 @@ The project demonstrates the practical implementation of database concepts, SQL 
 
 Stores user information.
 
-| Column  | Description         |
-| ------- | ------------------- |
-| user_id | Unique User ID      |
-| name    | User Name           |
-| email   | User Email          |
-| role    | user / fact_checker |
+| Column   | Description         |
+| -------  | ------------------- |
+| user_id  | Unique User ID      |
+| name     | User Name           |
+| email    | User Email          |
+| role     | user / fact_checker |
+| password | user password       |
 
 ### Sources
 
@@ -106,126 +150,288 @@ Stores verification results.
 
 ---
 
-## ⚙ Features
+# 🖥 GUI Screens
 
-* Add Users
-* Add News
-* Report News
-* Fact Check News
-* View Reports
-* View Fake News
-* JDBC Database Connectivity
-* SQL JOIN Queries
-* CRUD Operations
-
----
-
-## 🧠 OOP Concepts Used
-
-### Encapsulation
-
-Used through classes and data members.
-
-### Abstraction
-
-Implemented using interfaces.
-
-### Inheritance
-
-Implemented through interface implementation.
-
-### Polymorphism
-
-Used by creating interface references to objects.
+- Login Page
+- Registration Page
+- Dashboard
+- Add User
+- Add News
+- Report News
+- Fact Check
+- View Reports
+- View Fake News
 
 ---
 
-## 🔄 Project Workflow
+# ⚙ Database Setup
 
-1. User submits a suspicious news report.
-2. Report is stored in the Reports table.
-3. Fact-checker reviews the reported news.
-4. Verification result is stored in Fact_Checks.
-5. System displays fake news records.
+## Step 1
 
----
-
-## 🚀 How to Run
-
-### Step 1: Create Database
+Create a database
 
 ```sql
 CREATE DATABASE fakenewsdb;
 ```
 
-### Step 2: Create Required Tables
+---
 
-Run all table creation scripts provided in the project.
+## Step 2
 
-### Step 3: Configure JDBC Connection
+Import all SQL tables into MySQL.
 
-Update your database credentials:
+Required tables:
+
+- Users
+- News
+- Reports
+- Fact_Checks
+- Sources
+
+---
+
+## Step 3
+
+Update database credentials inside `DBConnection`.
 
 ```java
 DriverManager.getConnection(
     "jdbc:mysql://localhost:3306/fakenewsdb",
     "root",
-    "your_password"
+    "YOUR_PASSWORD"
 );
 ```
 
-### Step 4: Run the Project
+---
 
-Compile and execute the Java file:
+## Step 4
+
+Add MySQL JDBC Driver to your project.
+
+Example:
+
+```
+mysql-connector-j-8.x.x.jar
+```
+
+---
+
+## Step 5
+
+Run
+
+```
+DB_Project.java
+```
+
+---
+
+
+# 🚀 Getting Started
+
+Follow these steps to run the project on your local machine.
+
+## Step 1: Clone the Repository
 
 ```bash
-javac DB_Project.java
-java DB_Project
+git clone https://github.com/YourUsername/Fake-News-Detection-System.git
 ```
+
+or download the project as a ZIP file and extract it.
 
 ---
 
-## 📊 Sample SQL Queries
+## Step 2: Open the Project
 
-### View All Reports
+Open the project in your preferred Java IDE:
+
+- Eclipse
+- IntelliJ IDEA
+- NetBeans
+- VS Code (with Java Extension Pack)
+
+---
+
+## Step 3: Create the Database
+
+Open MySQL Workbench and create a new database.
 
 ```sql
-SELECT Users.name, News.title, Reports.reason
-FROM Reports
-JOIN Users ON Reports.user_id = Users.user_id
-JOIN News ON Reports.news_id = News.news_id;
-```
-
-### View Fake News
-
-```sql
-SELECT News.title, Fact_Checks.status
-FROM Fact_Checks
-JOIN News ON Fact_Checks.news_id = News.news_id
-WHERE status='Fake';
+CREATE DATABASE fakenewsdb;
 ```
 
 ---
 
-## 🔮 Future Enhancements
+## Step 4: Import the SQL File
 
-* AI-based Fake News Detection
-* User Authentication
-* GUI Interface
-* News API Integration
-* Source Credibility Analysis
-* Web-Based Version
+Import the provided SQL file into the `fakenewsdb` database.
 
----
+This will create all required tables:
 
-## 📚 Academic Purpose
-
-This project was developed as part of a **Database Management Systems (DBMS)** course to demonstrate practical implementation of database design, SQL, JDBC, and Object-Oriented Programming concepts.
+- Users
+- Sources
+- News
+- Reports
+- Fact_Checks
 
 ---
 
-## 👨‍💻 Author
+## Step 5: Configure Database Connection
+
+Open the `DBConnection` class and update your MySQL credentials.
+
+```java
+DriverManager.getConnection(
+    "jdbc:mysql://localhost:3306/fakenewsdb",
+    "root",
+    "YOUR_PASSWORD"
+);
+```
+
+---
+
+## Step 6: Add MySQL JDBC Driver
+
+Download the MySQL Connector/J driver and add it to your project's libraries.
+
+Example:
+
+```
+mysql-connector-j-8.x.x.jar
+```
+
+---
+
+## Step 7: Run the Application
+
+Run the main Java file:
+
+```
+DB_Project.java
+```
+
+---
+
+## Step 8: Register a New User
+
+When the application starts:
+
+- Click **Sign Up**
+- Create a new account
+- Log in using your registered email and password
+
+---
+
+## Step 9: Start Using the System
+
+You can now:
+
+- Add News
+- Report News
+- Perform Fact Checks
+- View Reports
+- View Fake News
+
+  
+# 📖 How It Works
+
+### User
+
+- Registers a new account
+- Logs into the system
+- Reports suspicious news
+
+### Fact Checker
+
+- Views reported news
+- Performs fact checking
+- System stores result
+
+### Admin
+
+- Manages users
+- Adds news
+- Views reports
+- Reviews fake news
+
+---
+
+# 📊 SQL Concepts Used
+
+This project demonstrates several important DBMS concepts:
+
+- CREATE TABLE
+- INSERT
+- UPDATE
+- DELETE
+- SELECT
+- WHERE
+- JOIN
+- COUNT()
+- Foreign Keys
+- Primary Keys
+- Relational Database Design
+- Entity Relationship Model
+
+---
+
+# 📚 Object-Oriented Programming Concepts
+
+- Classes
+- Objects
+- Interfaces
+- Abstraction
+- Encapsulation
+- JDBC Connectivity
+- Exception Handling
+
+---
+
+# 🎯 Future Improvements
+
+- AI-based fake news detection
+- News API integration
+- Image verification
+- User profile management
+- Password encryption
+- Admin analytics dashboard
+- Search functionality
+- Export reports to PDF
+- Email notifications
+- News categories
+
+---
+
+# 📷 Screenshots
+
+You can add screenshots here.
+
+Example:
+
+```
+screenshots/
+    login.png
+    dashboard.png
+    add_news.png
+    reports.png
+```
+
+---
+
+# 👨‍💻 Author
 
 **Bharat Kumar**
 
-DBMS Course Project
+Database Management Systems (DBMS) Project
+
+---
+
+# 📄 License
+
+This project was developed for educational purposes as part of a university Database Management Systems course.
+
+Feel free to fork, modify, and learn from the project.
+
+---
+
+## ⭐ If you found this project useful, consider giving it a Star!
