@@ -242,7 +242,7 @@ mysql-connector-j-8.x.x.jar
 Run the main Java file:
 
 ```
-DB_Project.java
+DBMS_Project.java
 ```
 
 ---
@@ -338,19 +338,59 @@ This project demonstrates several important DBMS concepts:
 
 ---
 
-# 📷 Screenshots
+# 📷 Application Screenshots
 
-You can add screenshots here.
+### 🔐 Login Screen
 
-Example:
+<img width="1108" height="798" alt="LoginFrame" src="https://github.com/user-attachments/assets/c8b2b66c-9e9d-4f84-9083-edeb6a10984e" />
 
-```
-screenshots/
-    login.png
-    dashboard.png
-    add_news.png
-    reports.png
-```
+---
+
+### 📝 User Registration
+
+<img width="1088" height="808" alt="UserRegistration" src="https://github.com/user-attachments/assets/42c7aea4-8c30-486b-86ea-36adf7859e42" />
+
+---
+
+### 🏠 Dashboard
+
+<img width="1225" height="801" alt="Dashboard" src="https://github.com/user-attachments/assets/7fa65739-bf8f-481f-8822-ada00aee8687" />
+
+---
+
+### 👤 Add User
+
+<img width="623" height="605" alt="adduser" src="https://github.com/user-attachments/assets/a07806c2-18b1-49fb-b80e-d4715f1ec5bd" />
+
+---
+
+### 📰 Add News
+
+<img width="863" height="737" alt="AddnewsFrame" src="https://github.com/user-attachments/assets/43079e10-09f1-4c8e-85d6-de42aef75892" />
+
+---
+
+### 🚩 Report News
+
+<img width="1040" height="777" alt="reportnews" src="https://github.com/user-attachments/assets/56f6ff50-2dfb-4c81-b9a6-2cf6366f97a0" />
+
+---
+
+### ✅ Fact Check
+
+<img width="761" height="521" alt="factcheckframe" src="https://github.com/user-attachments/assets/76d2b524-a411-4292-b241-d4ebbae887b9" />
+
+---
+
+### 📊 View Reports
+
+<img width="1052" height="611" alt="viewReports" src="https://github.com/user-attachments/assets/d354e667-8ba1-43ae-932a-5c64230ac55d" />
+
+---
+
+### ❌ Fake News List
+
+<img width="982" height="558" alt="fakeNewsList" src="https://github.com/user-attachments/assets/fece3555-879d-427a-9fc4-24c5529ef7ec" />
 
 ---
 
