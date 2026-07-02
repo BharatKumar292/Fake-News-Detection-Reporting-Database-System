@@ -1,7 +1,9 @@
 # 📰 Fake News Detection & Reporting System
 
 ### Java Swing • JDBC • MySQL
--
+
+---
+
 A GUI-based **Fake News Detection & Reporting System** developed using **Java Swing** and **MySQL** as part of a **Database Management Systems (DBMS)** course project.
 
 The system allows users to register, log in, report suspicious news articles, and enables fact checkers to review reported news. All information is stored and managed using a relational database with proper entity relationships.
